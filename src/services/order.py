@@ -255,6 +255,10 @@ def dashboard_summary(
         .one()
     )
 
+    # coalesce() guarantees a value at runtime; narrow the Optional type for mypy.
+    revenue_month = revenue_month or Decimal(0)
+    cost_month = cost_month or Decimal(0)
+
     recent = (
         db.query(Order)
         .options(selectinload(Order.history), selectinload(Order.user))
