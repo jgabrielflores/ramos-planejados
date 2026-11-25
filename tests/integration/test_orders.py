@@ -242,7 +242,7 @@ def test_admin_sets_financial_fields_and_dates(client, customer_headers, admin_h
 
     resp = client.patch(
         f"/api/v1/orders/{order['id']}",
-        json={"project_value": "8500.00", "estimated_cost": "5200.00", "due_date": "2026-06-20"},
+        json={"project_value": "8500.00", "estimated_cost": "5200.00", "due_date": FUTURE_DATE},
         headers=admin_headers,
     )
     assert resp.status_code == 200
@@ -250,7 +250,7 @@ def test_admin_sets_financial_fields_and_dates(client, customer_headers, admin_h
     assert body["project_value"] == "8500.00"
     assert body["estimated_cost"] == "5200.00"
     assert body["profit"] == "3300.00"
-    assert body["due_date"] == "2026-06-20"
+    assert body["due_date"] == FUTURE_DATE
 
 
 @pytest.mark.integration

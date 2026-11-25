@@ -11,8 +11,6 @@ Substitui o controle informal por WhatsApp e planilhas por uma plataforma estrut
 [![CI](https://github.com/jgabrielflores/ramos-planejados/actions/workflows/ci.yml/badge.svg)](https://github.com/jgabrielflores/ramos-planejados/actions/workflows/ci.yml)
 ![Cobertura](https://img.shields.io/badge/cobertura-95%25-2ea44f)
 ![Testes](https://img.shields.io/badge/testes-169%20passando-2ea44f)
-[![Deploy](https://img.shields.io/badge/deploy-online-2ea44f?logo=railway&logoColor=white)](https://ramos-planejados.up.railway.app)
-[![API](https://img.shields.io/badge/API-Swagger-009688?logo=fastapi&logoColor=white)](https://ramos-planejados-api.up.railway.app/docs)
 
 <br>
 
@@ -87,14 +85,9 @@ O sistema foi modelado para a **Ramos Planejados**, marcenaria de móveis sob me
 
 ## Demonstração
 
-A aplicação está **publicada e no ar** na Railway:
+A aplicação foi publicada na Railway (frontend, API e PostgreSQL). **A hospedagem pública está fora do ar no momento.** Para ver o sistema funcionando, rode o projeto localmente com Docker: [Como executar](#como-executar-desenvolvimento-local).
 
-| Recurso | Link | Acesso |
-|---|---|---|
-| **Aplicação** (site + portal + admin) | **https://ramos-planejados.up.railway.app** | público |
-| **API - Swagger UI** | **https://ramos-planejados-api.up.railway.app/docs** | público |
-
-As telas abaixo são rotas da aplicação no ar. A landing e as telas de autenticação são públicas; o portal do cliente (`/conta/*`) e o painel admin (`/admin/*`) exigem login.
+As telas abaixo são rotas da aplicação. A landing e as telas de autenticação são públicas; o portal do cliente (`/conta/*`) e o painel admin (`/admin/*`) exigem login.
 
 | Tela | Rota | Acesso | Descrição |
 |---|---|---|---|
@@ -307,7 +300,7 @@ stateDiagram-v2
 
 ## Como executar (desenvolvimento local)
 
-> Para apenas **ver o sistema funcionando**, use a [aplicação no ar](https://ramos-planejados.up.railway.app) - não é preciso instalar nada. Esta seção é para rodar o projeto localmente, em ambiente de desenvolvimento.
+> A hospedagem pública está fora do ar no momento. Esta seção mostra como rodar o projeto localmente, em ambiente de desenvolvimento.
 
 ### Pré-requisitos
 
@@ -448,7 +441,7 @@ A pasta [`docs/`](docs/) reúne a documentação técnica aprofundada:
 | [docs/seguranca.md](docs/seguranca.md) | Modelo de segurança, mitigações OWASP, testes adversariais |
 | [docs/desenvolvimento.md](docs/desenvolvimento.md) | Setup, ambiente, fluxo de trabalho, *troubleshooting* |
 | [docs/fluxo-de-trabalho.md](docs/fluxo-de-trabalho.md) | Ambientes, branches, Git Flow e pipeline CI/CD, de ponta a ponta |
-| [docs/deploy-railway.md](docs/deploy-railway.md) | Deploy na Railway: URLs ao vivo, estrutura dos ambientes e como o deploy acontece |
+| [docs/deploy-railway.md](docs/deploy-railway.md) | Deploy na Railway: estrutura dos ambientes e como o deploy acontece (hospedagem fora do ar no momento) |
 
 O índice completo da documentação técnica está em [docs/README.md](docs/README.md). Veja também [CONTRIBUTING.md](CONTRIBUTING.md) (como contribuir), [CHANGELOG.md](CHANGELOG.md) (histórico de versões) e [LICENSE](LICENSE) (licença MIT).
 

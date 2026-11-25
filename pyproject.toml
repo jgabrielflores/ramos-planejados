@@ -9,7 +9,9 @@ requires-python = ">=3.10"
 dependencies = [
   "fastapi>=0.111",
   "uvicorn[standard]>=0.29",
-  "sqlalchemy>=2.0",
+  # Pin sqlalchemy <2.1: 2.1 makes psycopg (v3) the default driver for
+  # postgresql:// URLs; this project uses psycopg2.
+  "sqlalchemy>=2.0,<2.1",
   "alembic>=1.13",
   "pydantic[email]>=2.7",
   "pydantic-settings>=2.2",

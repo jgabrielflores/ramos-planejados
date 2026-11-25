@@ -1,5 +1,7 @@
 # Deploy - Railway
 
+> **Nota:** a hospedagem na Railway está fora do ar no momento. As URLs abaixo registram como os ambientes foram publicados e não respondem hoje.
+
 Como a aplicação está publicada: ambientes, URLs ao vivo, estrutura no Railway e como o deploy
 acontece. Para o **processo** de promoção de código (branches, PRs, CI/CD), veja
 [fluxo-de-trabalho.md](fluxo-de-trabalho.md); para a **topologia** da arquitetura, veja
